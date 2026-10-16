@@ -1,4 +1,4 @@
-﻿# 卷二 · JavaScript 02：事件与 DOM
+﻿# 第二章 · JavaScript 02：事件与 DOM
 
 > UI 测试天天点界面，但事件和 DOM 的底层规则很少单独练。
 

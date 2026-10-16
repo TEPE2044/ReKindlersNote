@@ -1,10 +1,10 @@
-﻿# 卷四 · 平台实战 01：Playwright 基础
+﻿# 第四章 · 平台实战 01：Playwright 基础
 
-> 卷四开始。你的主武器不是 JS 语法，是 Playwright。
+> 第四章开始。你的主武器不是 JS 语法，是 Playwright。
 
 ## 为什么现在学
 
-卷一到卷三补的是读懂代码的底子。卷四开始，所有练习都挂在 `xinhuo_test_platform` 的真实场景上。很多人用 Playwright 只到"能跑起来"，这里补的是改 AI 代码时要看懂的点。
+第一章到第三章补的是读懂代码的底子。第四章开始，所有练习都挂在 `xinhuo_test_platform` 的真实场景上。很多人用 Playwright 只到"能跑起来"，这里补的是改 AI 代码时要看懂的点。
 
 ## 最小可跑结构
 

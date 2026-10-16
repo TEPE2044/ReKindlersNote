@@ -1,4 +1,4 @@
-﻿# 卷三 · JavaScript 05：this 与原型链
+﻿# 第三章 · JavaScript 05：this 与原型链
 
 > 方法被拆出去之后，`this` 不会自动跟着走。
 

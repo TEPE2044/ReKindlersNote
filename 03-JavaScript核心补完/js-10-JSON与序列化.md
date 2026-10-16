@@ -1,4 +1,4 @@
-﻿# 卷三 · JavaScript 10：JSON 与序列化
+﻿# 第三章 · JavaScript 10：JSON 与序列化
 
 > 配置、报告、测试数据，最后都要变成字符串存起来。JSON 不是万能的。
 
