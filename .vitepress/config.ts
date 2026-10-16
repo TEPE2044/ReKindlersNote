@@ -12,11 +12,11 @@ const volumes = [
     ],
   },
   {
-    text: '卷二：JavaScript 你塌掉的三块',
+    text: '卷二：JavaScript 基础补漏',
     items: [
-      { text: '异步与事件循环', link: '/02-JavaScript你塌掉的三块/js-01-异步与事件循环' },
-      { text: '事件与 DOM', link: '/02-JavaScript你塌掉的三块/js-02-事件与DOM' },
-      { text: '手写三件', link: '/02-JavaScript你塌掉的三块/js-03-手写三件' },
+      { text: '异步与事件循环', link: '/02-JavaScript基础补漏/js-01-异步与事件循环' },
+      { text: '事件与 DOM', link: '/02-JavaScript基础补漏/js-02-事件与DOM' },
+      { text: '手写三件', link: '/02-JavaScript基础补漏/js-03-手写三件' },
     ],
   },
   {
@@ -46,6 +46,7 @@ const volumes = [
     items: [
       { text: '目录', link: '/附录/index' },
       { text: '读法', link: '/附录/00-读法' },
+      { text: '作答说明', link: '/附录/作答说明' },
       { text: '诊断地图', link: '/附录/01-诊断地图' },
       { text: '出口', link: '/附录/outro' },
     ],
@@ -72,8 +73,7 @@ export default defineConfig({
     'dev/**',
   ],
 
-  // The reading guide links to a local-only answer folder that is intentionally not published.
-  ignoreDeadLinks: [/%E4%BD%9C%E7%AD%94/],
+
 
   themeConfig: {
     nav: [{ text: '完整目录', link: '/附录/index' }],
