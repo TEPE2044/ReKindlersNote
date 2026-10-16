@@ -1,0 +1,23 @@
+:root {
+  --vp-c-brand-1: #2f776d;
+  --vp-c-brand-2: #27665d;
+  --vp-c-brand-3: #20564f;
+  --vp-c-brand-soft: rgb(47 119 109 / 14%);
+  --vp-home-hero-name-color: #245e56;
+}
+
+.dark {
+  --vp-c-brand-1: #75b9ad;
+  --vp-c-brand-2: #8ac9be;
+  --vp-c-brand-3: #9bd8cd;
+  --vp-c-brand-soft: rgb(117 185 173 / 16%);
+  --vp-home-hero-name-color: #9bd8cd;
+}
+
+.vp-doc div[class*='language-'] button.copy {
+  display: none !important;
+}
+
+.vp-doc details {
+  margin: 1.5rem 0;
+}

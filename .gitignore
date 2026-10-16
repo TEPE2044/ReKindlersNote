@@ -1,0 +1,33 @@
+# Internal planning and collaboration notes (keep local; do not publish)
+/需求.md
+/需求讨论.md
+/大纲.md
+/分工.md
+/AGENTS.md
+/README.md
+/.opencode/
+/教材质量报告/
+/作答/
+/review/
+
+# Local test scripts (keep in the workspace; do not track)
+/scripts/check-site-output.mjs
+/scripts/verify-links.mjs
+/scripts/verify-search-index.mjs
+
+# Dependencies
+/node_modules/
+/.pnpm-store/
+
+# VitePress generated files
+/.vitepress/cache/
+/.vitepress/dist/
+
+# Local environment and editor files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
