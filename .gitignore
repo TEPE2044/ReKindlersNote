@@ -11,9 +11,7 @@
 /review/
 
 # Local test scripts (keep in the workspace; do not track)
-/scripts/check-site-output.mjs
-/scripts/verify-links.mjs
-/scripts/verify-search-index.mjs
+/scripts
 
 # Dependencies
 /node_modules/
