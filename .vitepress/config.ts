@@ -58,6 +58,8 @@ export default defineConfig({
   description: '持续扩展的知识库，当前以 JavaScript 为主，未来会继续收录更多语言与技术方向。',
   lang: 'zh-CN',
   cleanUrls: true,
+  // GitHub Pages 项目站：https://tepe2044.github.io/ReKindlersNote/
+  base: '/ReKindlersNote/',
 
   // Only internal project documents are excluded. Lesson Markdown remains the source of truth.
   srcExclude: [
