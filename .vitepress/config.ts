@@ -1,4 +1,5 @@
 ﻿import { defineConfig } from 'vitepress'
+import { withPwa } from '@vite-pwa/vitepress'
 
 const volumes = [
   {
@@ -53,7 +54,7 @@ const volumes = [
   },
 ]
 
-export default defineConfig({
+export default withPwa(defineConfig({
   title: '熵减阁',
   description: '持续扩展的知识库，当前以 JavaScript 为主，未来会继续收录更多语言与技术方向。',
   lang: 'zh-CN',
@@ -75,6 +76,69 @@ export default defineConfig({
     'dev/**',
   ],
 
+  head: [
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/ReKindlersNote/favicon-32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/ReKindlersNote/favicon-48.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/ReKindlersNote/apple-touch-icon.png' }],
+    ['meta', { name: 'theme-color', content: '#2f776d' }],
+  ],
+
+  // PWA（2026-10-19 决议：按需缓存 + 更新策略 A + vite-plugin-pwa）
+  pwa: {
+    registerType: 'prompt',
+    manifest: {
+      lang: 'zh-CN',
+      name: '熵减阁',
+      short_name: '熵减阁',
+      description: '持续扩展的知识库，当前以 JavaScript 为主，未来会继续收录更多语言与技术方向。',
+      start_url: '/ReKindlersNote/',
+      scope: '/ReKindlersNote/',
+      display: 'standalone',
+      background_color: '#ffffff',
+      theme_color: '#2f776d',
+      icons: [
+        { src: '/ReKindlersNote/pwa-icon-192.png', sizes: '192x192', type: 'image/png' },
+        { src: '/ReKindlersNote/pwa-icon-512.png', sizes: '512x512', type: 'image/png' },
+        { src: '/ReKindlersNote/pwa-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+      ],
+    },
+    workbox: {
+      // 按需缓存决议：预缓存只装骨架（首页、目录页、404、搜索索引、主题字体、图标）
+      globPatterns: [
+        'index.html',
+        '附录/index.html',
+        '404.html',
+        'assets/app.*.js',
+        'assets/chunks/*.js',
+        'assets/index.md.*.js',
+        'assets/附录_index.md.*.js',
+        'assets/style.*.css',
+        'vp-icons.css',
+        'assets/*.woff2',
+        'pwa-icon-*.png',
+        'pwa-maskable-512.png',
+        'apple-touch-icon.png',
+      ],
+      cleanupOutdatedCaches: true,
+      clientsClaim: true,
+      // MPA（VitePress）不能用 SPA 式导航回退：否则刷新/直达章节会拿到首页
+      navigateFallback: null,
+      runtimeCaching: [
+        {
+          // 正文页与页面 chunk：访问过才缓存。SWR = 有缓存先秒回（离线/GH Pages 502 全免疫），
+          // 后台静默校验；未访问过的走网络（离线时打不开 = 决议接受的代价）。
+          urlPattern: ({ sameOrigin, url }) => sameOrigin && url.pathname.startsWith('/ReKindlersNote/'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'on-demand-pages',
+            expiration: { maxEntries: 100 },
+            cacheableResponse: { statuses: [0, 200] },
+          },
+        },
+      ],
+    },
+  },
+
   themeConfig: {
     nav: [{ text: '完整目录', link: '/附录/index' }],
     sidebar: volumes,
@@ -87,4 +151,4 @@ export default defineConfig({
     lightModeSwitchTitle: '切换到浅色模式',
     darkModeSwitchTitle: '切换到深色模式',
   },
-})
+}))
