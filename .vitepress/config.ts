@@ -2,7 +2,7 @@
 
 const volumes = [
   {
-    text: '第一章：数据结构五原型',
+    text: '第一章 · 数据结构五原型',
     items: [
       { text: '数组与双指针', link: '/01-数据结构五原型/ds-01-数组与双指针' },
       { text: '链表翻转', link: '/01-数据结构五原型/ds-02-链表翻转' },
@@ -12,7 +12,7 @@ const volumes = [
     ],
   },
   {
-    text: '第二章：JavaScript 基础补漏',
+    text: '第二章 · JavaScript 基础补漏',
     items: [
       { text: '异步与事件循环', link: '/02-JavaScript基础补漏/js-01-异步与事件循环' },
       { text: '事件与 DOM', link: '/02-JavaScript基础补漏/js-02-事件与DOM' },
@@ -20,7 +20,7 @@ const volumes = [
     ],
   },
   {
-    text: '第三章：JavaScript 核心补完',
+    text: '第三章 · JavaScript 核心补完',
     items: [
       { text: '作用域与闭包', link: '/03-JavaScript核心补完/js-04-作用域与闭包' },
       { text: 'this 与原型链', link: '/03-JavaScript核心补完/js-05-this与原型链' },
@@ -33,7 +33,7 @@ const volumes = [
     ],
   },
   {
-    text: '第四章：平台实战',
+    text: '第四章 · 平台实战',
     items: [
       { text: 'Playwright 基础', link: '/04-平台实战/pf-01-Playwright基础' },
       { text: '用例组织是树', link: '/04-平台实战/pf-02-用例组织是树' },
@@ -74,8 +74,6 @@ export default defineConfig({
     'review/**',
     'dev/**',
   ],
-
-
 
   themeConfig: {
     nav: [{ text: '完整目录', link: '/附录/index' }],
