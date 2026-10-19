@@ -60,5 +60,3 @@
 | Node.js | fs/path、HTTP、EventEmitter |
 | TypeScript | 类型注解、接口、泛型 |
 | Vue3 / 框架 | 组合式 API、响应式、组件通信 |
-
-## PWA测试
