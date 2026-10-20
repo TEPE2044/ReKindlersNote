@@ -59,8 +59,6 @@ run done: 1 failure(s)
 
 </details>
 
-第五章到这里结束。
-
 写完整份放进 `作答/05/node-03.md`。
 
 第五章到这里结束。出口任务见 [附录/outro.md](../附录/outro.md)。

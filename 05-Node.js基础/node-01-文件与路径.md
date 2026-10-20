@@ -42,10 +42,10 @@ try {
 
 ## 练习
 
-**Q1.** 用 `node:fs/promises` 和 `node:path`，在临时目录里写入一个 JSON 文件，再读回来并输出文本。验收输出：
+**Q1.** 创建一个唯一的临时目录，在其中准备 `reports/2026/run-result.json`。`reports/2026` 起初不存在。把 `{ runId: "r-07", failed: 2 }` 写入文件，读回并解析 JSON，输出 `failed`，最后清理临时目录。验收输出：
 
 ```text
-{"caseId":"TC-7","status":"failed"}
+2
 ```
 
 **Q2.** 对路径 `reports/2026/run-result.json`，分别取得文件名和扩展名。验收输出：
@@ -60,7 +60,7 @@ run-result.json
 <details>
 <summary>验收要点</summary>
 
-- Q1：读取结果是 JSON 文本；文件操作完成后清理临时目录。
+- Q1：先创建不存在的嵌套目录，再写入并解析 JSON；完成后清理临时目录。
 - Q2：文件名是 `run-result.json`，扩展名是 `.json`。可以用 `path.basename()` 和 `path.extname()`。
 - 如果输出是 `Buffer`，读取文本时漏了 `"utf8"`。
 - 不要用字符串拼接路径；路径分隔符由 `node:path` 处理。
