@@ -26,6 +26,9 @@ features:
   - title: 第四章 · 平台实战
     details: 用 Playwright、用例树、状态机和递归连接实际测试工作。
     link: /04-平台实战/pf-01-Playwright基础
+  - title: 第五章 · Node.js 基础
+    details: 用文件系统、路径、HTTP 和事件处理测试平台数据。
+    link: /05-Node.js基础/node-01-文件与路径
 ---
 
 ## 怎么读

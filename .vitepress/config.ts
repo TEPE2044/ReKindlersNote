@@ -43,6 +43,14 @@ const volumes = [
     ],
   },
   {
+    text: '第五章 · Node.js 基础',
+    items: [
+      { text: '文件与路径', link: '/05-Node.js基础/node-01-文件与路径' },
+      { text: 'HTTP 服务', link: '/05-Node.js基础/node-02-HTTP服务' },
+      { text: '事件与 EventEmitter', link: '/05-Node.js基础/node-03-EventEmitter' },
+    ],
+  },
+  {
     text: '附录',
     items: [
       { text: '目录', link: '/附录/index' },
