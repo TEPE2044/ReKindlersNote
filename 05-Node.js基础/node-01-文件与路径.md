@@ -1,12 +1,12 @@
 # 第五章 · Node.js 01：文件与路径
 
-测试平台会把运行结果写进 JSON、日志或临时文件。Node.js 提供 `node:fs` 读写文件，`node:path` 处理路径；这节解决的是“程序在哪个目录运行”和“文件实际放在哪”这两类问题。
+测试平台会把运行结果写进 JSON、日志或临时文件。Node.js 的 `node:fs` 负责读写文件，`node:path` 负责拼接和解析路径。本节分别处理文件位置和文件内容。
 
 Windows 和 Linux 的路径分隔符不同。拼路径不要手写 `/` 或 `\`，用 `path.join()`；读写文件时用异步 API，避免文件操作卡住事件循环。
 
 ## 用临时目录写入并读取结果
 
-下面代码使用 ES Module，可在本项目根目录保存为 `.js` 文件后运行：
+下面代码使用 ES Module，可在本项目根目录保存为 `.js` 文件后运行。ES Module 默认是严格模式；给未声明的变量赋值会抛出 `ReferenceError`，不需要额外添加 `"use strict"`：
 
 ```js
 import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
