@@ -15,7 +15,7 @@ hero:
 
 features:
   - title: 第一章 · 数据结构五原型
-    details: 数组、链表、二分、合并，以及栈和队列。
+    details: 数组、链表、二分、合并、栈队列，以及数组方法速查补充。
     link: /01-数据结构五原型/ds-01-数组与双指针
   - title: 第二章 · JavaScript 基础补漏
     details: 异步、事件与 DOM、手写练习。
